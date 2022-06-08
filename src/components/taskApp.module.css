@@ -1,3 +1,9 @@
 .taskApp {
   /* Sample */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  flex-direction: column;
 }
