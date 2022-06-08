@@ -1,9 +1,12 @@
 .taskApp {
   /* Sample */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  text-align: center;
+  overflow: hidden;
   height: 60vh;
-  flex-direction: column;
 }

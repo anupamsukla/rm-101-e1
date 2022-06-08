@@ -15,12 +15,12 @@ const AddTask = (props) => {
 
   return (
     <div className={styles.addTask} >
-      <input data-testid="add-task-input"
+      <input className={styles.input} data-testid="add-task-input"
         type="text"
         placeholder="Add task..."
         value={item}
         onChange={(e) => setItem(e.target.value)} />
-      <button data-testid="add-task-button" onClick={() => {
+      <button className={styles.button} data-testid="add-task-button" onClick={() => {
         addtodo()
       }}
       >+</button>

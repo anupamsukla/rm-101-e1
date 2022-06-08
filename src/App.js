@@ -3,7 +3,10 @@ import TaskApp from "./components/TaskApp";
 import "./App.css"
 function App() {
   return (
-    <TaskApp />);
+    <div className="taskAppMain">
+      <TaskApp />
+    </div>
+  );
 }
 
 export default App;

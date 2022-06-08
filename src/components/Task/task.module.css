@@ -1,11 +1,16 @@
 .task {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  /* justify-content: ; */
 }
 
 .checked {
   text-decoration: line-through;
+}
+
+input {
+  width: fit-content;
+  text-align: left;
 }
 
 .notchecked {

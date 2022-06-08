@@ -5,3 +5,8 @@
 .empty {
   /* sample */
 }
+
+ul {
+  padding: none;
+  margin: none;
+}
