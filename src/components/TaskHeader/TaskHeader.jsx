@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./taskHeader.module.css";
 
-const TaskHeader = () => {
+const TaskHeader = ({ todo }) => {
   // sample values to be replaced
-  let totalTask = 0;
-  let unCompletedTask = 0;
+  let totalTask = todo.length;
+  let unCompletedTask = todo.filter(el => el.done === false).length;
 
   // NOTE: do not delete `data-testid` key value pair
   return (

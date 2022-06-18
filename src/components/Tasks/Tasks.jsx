@@ -1,16 +1,29 @@
 import React from "react";
 import styles from "./tasks.module.css";
+import { Task } from "../Task";
 
-const Tasks = () => {
-  // NOTE: do not delete `data-testid` key value pair
+const Tasks = (props) => {
+  const { todo, setTodo } = props
+  function handleClick(id) {
+    setTodo(
+      todo.map((task) =>
+        task.id === id ? { ...task, done: !task.done } : task
+      )
+    );
+  }
+  function handleDelete(id) {
+    setTodo(todo.filter((task) => task.id !== id));
+  }
   return (
     <>
       <ul data-testid="tasks" className={styles.tasks}>
-        {/* Task List */}
+        {todo.map(task => <Task task={task} handleClick={handleClick} handleDelete={handleDelete} />)}
       </ul>
-      <div data-testid="tasks-empty" className={styles.empty}>
-        {/* Show when No Tasks are present */}
-      </div>
+      {todo.length === 0 ? (
+        <div data-testid="tasks-empty" className={styles.empty}>
+          Please Add Some Thing
+        </div>
+      ) : null}
     </>
   );
 };
