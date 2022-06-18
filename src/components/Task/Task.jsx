@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./task.module.css";
 import { Counter } from "../Counter"
 
-const Task = ({ task, handleClick, handleDelete }) => {
+const Task = ({ task, handleClick, handleDelete, idx }) => {
   // NOTE: do not delete `data-testid` key value pair
-  console.log(task)
+
   return (
     <li data-testid="task" className={styles.task} key={task.id}>
       {task.done ? (
@@ -12,7 +12,7 @@ const Task = ({ task, handleClick, handleDelete }) => {
           type="checkbox"
           data-testid="task-checkbox"
           onClick={() => {
-            handleClick(task.id);
+            handleClick(idx);
           }}
           defaultChecked
         />
@@ -21,7 +21,7 @@ const Task = ({ task, handleClick, handleDelete }) => {
           type="checkbox"
           data-testid="task-checkbox"
           onClick={() => {
-            handleClick(task.id);
+            handleClick(idx);
           }}
         />
       )}
@@ -35,7 +35,7 @@ const Task = ({ task, handleClick, handleDelete }) => {
       <button
         data-testid="task-remove-button"
         onClick={() => {
-          handleDelete(task.id);
+          handleDelete(idx);
         }}
       >
         x
